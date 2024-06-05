@@ -65,8 +65,9 @@ elif [[ $choose == "4" ]]; then
    cp ~/.ssh/config ~/.ssh/config.bak
    echo -e "\e[32mБэкап готов. Лежит в ~/.ssh/config.bak\e[0m"
 elif [[ $choose == "5" ]]; then
-   tar -czf ~/.ssh/keys_$date.tar.gz ~/.ssh/id_*
-   echo -e "\e[32mБэкап ключей готов. Лежит в ~/.ssh/keys_$date.tar.gz\e[0m"
+   cd /home/$USER/.ssh
+   tar -czf /home/$USER/Documents/keys_$date.tar.gz ./id_*
+   echo -e "\e[32mБэкап ключей готов. Лежит в ~/Documents/keys_$date.tar.gz\e[0m"
 elif [[ $choose == "1" ]]; then
     # Файл конфигурации SSH
     SSH_CONFIG="$HOME/.ssh/config"
