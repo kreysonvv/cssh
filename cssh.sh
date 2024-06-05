@@ -38,7 +38,7 @@ EOF
 }
 
 if [[ $choose == "2" ]]; then
-   cat ~/.ssh/config
+   awk '{print "\033[31m" $0 "\033[0m"}' ~/.ssh/config
 elif [[ $choose == "3" ]]; then
    echo "Введите имя хоста или IP-адрес"
    read host
