@@ -125,7 +125,7 @@ elif [[ $choose == "1" ]]; then
              found = 1
              next
         }
-        found && /Hostname/ {
+        found && /HostName/ {
             print $2
             exit
         }
